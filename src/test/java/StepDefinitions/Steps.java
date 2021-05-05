@@ -1,5 +1,9 @@
 package StepDefinitions;
 
+import PageObjects.Asifs_HudPage;
+import PageObjects.Asifs_LoginPage;
+import PageObjects.Asifs_NewCandidatePage;
+import PageObjects.BasePage;
 import PageObjects.Blockers.OrganisationClientContactAddClientToOrganisationPage;
 import PageObjects.Sprint29.FEAndBETransitionToCVSentStageSingleOrMultiPage;
 import PageObjects.Sprint29.FEImplementPaginationToTransitionToOfferStageSingleOrMultiPage;
@@ -32,18 +36,24 @@ import PageObjects.Working.FEOrganisationCreateActivityActivityModalPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.hotkey.Keys;
 
 
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class Steps {
 
     public WebDriver driver;
+    public WebDriverWait wait;
     public CreateNewJobPage lp;
     public CreateCandidatesPage ccp;
     public CreateNewJobPage cjp;
@@ -94,17 +104,32 @@ public class Steps {
     public FEImplementPaginationToTransitionToOfferStageSingleOrMultiPage iptos;
     public FEAndBETransitionToCVSentStageSingleOrMultiPage ttcvs;
 
+    public Asifs_LoginPage asifs_loginPage;
+    public Asifs_HudPage asifs_hudPage;
+    public Asifs_NewCandidatePage asifs_newCandidatePage;
+
+
+    @Before
+    public void doSomethingBefore(Scenario scenario) {
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Driver/chromedriver_v90.exe");
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 10);
+        asifs_hudPage = new Asifs_HudPage(driver, wait);
+        asifs_loginPage = new Asifs_LoginPage(driver, wait);
+        asifs_newCandidatePage = new Asifs_NewCandidatePage(driver, wait);
+    }
 
     @After
     public void doSomethingAfter(Scenario scenario) {
         if (driver != null) {
             //driver.quit();
         }
+
     }
 
     @Given("User launch Chrome browser")
     public void user_launch_chrome_browser() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Driver/Chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Driver/chromedriver_v90.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
@@ -1750,6 +1775,73 @@ public class Steps {
         ttcvs.clickClientContact_menuitem();
     }
 
+    /*
+        THIS IS JUST FOR EXPERIMENTAL PURPOSES
+     */
+    @Given("this is test step one")
+    public void thisIsTestStepOne() {
+        asifs_loginPage.OpenPage();
+        asifs_loginPage.emailTextField.sendKeys("jjonzz@digitalzenith.io");
+        asifs_loginPage.passwordField.sendKeys("MartianM@nhunt3r");
+        asifs_loginPage.submitButton.click();
+        asifs_hudPage.WaitForElementToBeVisible(asifs_hudPage.universalPlusIcon);
+        asifs_hudPage.universalPlusIcon.click();
+        asifs_hudPage.WaitForElementToBeVisible(asifs_hudPage.universalPlusIcon_CreateCandidate);
+        asifs_hudPage.universalPlusIcon_CreateCandidate.click();
+        asifs_newCandidatePage.firstNameTextfield.sendKeys("First Name Test");
+        asifs_newCandidatePage.familyNameTextfield.sendKeys("Family Name Test");
+    }
+
+    @Given("I have logged into the application")
+    public void iHaveLoggedIntoTheApplication() {
+        // Open the login page
+        asifs_loginPage.OpenPage();
+        // Enter Email details
+        asifs_loginPage.emailTextField.sendKeys("jjonzz@digitalzenith.io");
+        // Enter password
+        asifs_loginPage.passwordField.sendKeys("MartianM@nhunt3r");
+        // Submit the login details
+        asifs_loginPage.submitButton.click();
+        // Verify you have logged in by verifying the Universal Plus icon is visible
+        asifs_hudPage.WaitForElementToBeVisible(asifs_hudPage.universalPlusIcon);
+    }
+
+    @When("I create a new candidate via the Plus Icon")
+    public void iCreateANewCandidateViaThePlusIcon() {
+        wait.until(ExpectedConditions.visibilityOf(asifs_hudPage.universalPlusIcon));
+        asifs_hudPage.universalPlusIcon.click();
+        wait.until(ExpectedConditions.visibilityOf(asifs_hudPage.universalPlusIcon_CreateCandidate));
+        asifs_hudPage.universalPlusIcon_CreateCandidate.click();
+        /** * Set Personal Details ** */
+        asifs_newCandidatePage.firstNameTextfield.sendKeys("Tony");
+        asifs_newCandidatePage.familyNameTextfield.sendKeys("Stark");
+        asifs_newCandidatePage.ciyTextfield.sendKeys("New York ");
+        /** * Set Contact Details ** */
+        asifs_newCandidatePage.contact_PlusIcon.click();
+        wait.until(ExpectedConditions.visibilityOf(asifs_newCandidatePage.contact_MobileNumber));
+        asifs_newCandidatePage.contact_MobileNumber.click();
+        Actions actions = new Actions(driver);
+        actions.sendKeys("07777777777" + Keys.ENTER)
+                .perform();
+        asifs_newCandidatePage.contact_PlusIcon.click();
+        wait.until(ExpectedConditions.visibilityOf(asifs_newCandidatePage.contact_EmailAddress));
+        asifs_newCandidatePage.contact_EmailAddress.click();
+        actions.sendKeys("cypress@test.com" + Keys.ENTER)
+                .perform();
+        /** * Set Current Role Details ** */
+        /** * Set Looking for Details ** */
+        /** * Set Candidate Registration Details ** */
+        /** * Set Interview Notes ** */
+
+        // Submit
+        asifs_newCandidatePage.createButton.click();
+    }
+
+    @Then("verify I can view the new candidate")
+    public void verifyICanViewTheNewCandidate() {
+        wait.until(ExpectedConditions.visibilityOf(asifs_hudPage.notification_CreatedCandidate));
+        assertEquals("TEST",asifs_hudPage.notification_CreatedCandidate.getText());
+    }
 }
 
 
