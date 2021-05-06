@@ -47,6 +47,8 @@ import org.sikuli.hotkey.Keys;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertEquals;
 
 
@@ -54,6 +56,7 @@ public class Steps {
 
     public WebDriver driver;
     public WebDriverWait wait;
+    public Actions actions;
     public CreateNewJobPage lp;
     public CreateCandidatesPage ccp;
     public CreateNewJobPage cjp;
@@ -114,6 +117,7 @@ public class Steps {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Driver/chromedriver_v90.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
+        actions = new Actions(driver);
         asifs_hudPage = new Asifs_HudPage(driver, wait);
         asifs_loginPage = new Asifs_LoginPage(driver, wait);
         asifs_newCandidatePage = new Asifs_NewCandidatePage(driver, wait);
@@ -1820,14 +1824,11 @@ public class Steps {
         asifs_newCandidatePage.contact_PlusIcon.click();
         wait.until(ExpectedConditions.visibilityOf(asifs_newCandidatePage.contact_MobileNumber));
         asifs_newCandidatePage.contact_MobileNumber.click();
-        Actions actions = new Actions(driver);
-        actions.sendKeys("07777777777" + Keys.ENTER)
-                .perform();
+        actions.sendKeys("07777777777" + Keys.ENTER).perform();
         asifs_newCandidatePage.contact_PlusIcon.click();
         wait.until(ExpectedConditions.visibilityOf(asifs_newCandidatePage.contact_EmailAddress));
         asifs_newCandidatePage.contact_EmailAddress.click();
-        actions.sendKeys("cypress@test.com" + Keys.ENTER)
-                .perform();
+        actions.sendKeys("cypress@test.com" + Keys.ENTER).perform();
         /** * Set Current Role Details ** */
         /** * Set Looking for Details ** */
         /** * Set Candidate Registration Details ** */
@@ -1840,7 +1841,7 @@ public class Steps {
     @Then("verify I can view the new candidate")
     public void verifyICanViewTheNewCandidate() {
         wait.until(ExpectedConditions.visibilityOf(asifs_hudPage.notification_CreatedCandidate));
-        assertEquals("TEST",asifs_hudPage.notification_CreatedCandidate.getText());
+        assertThat(asifs_hudPage.notification_CreatedCandidate.getText(), containsString("Tony Stark"));
     }
 }
 

@@ -14,14 +14,11 @@ public class CandidatePersonalUpdateAddressPage {
 
     public WebDriver ldriver;
     public WebDriverWait wait;
-    public WebDriver getWebriver;
-
 
     public CandidatePersonalUpdateAddressPage(WebDriver rdriver) {
         ldriver = rdriver;
         PageFactory.initElements(rdriver, this);
         wait = new WebDriverWait(ldriver,10);
-        getWebriver = new ChromeDriver();
     }
 
     By lnkPersonal = By.id("scrollable-auto-tab-2");
@@ -103,10 +100,6 @@ public class CandidatePersonalUpdateAddressPage {
     }
 
     //#############################################################
-
-    private WebDriver getWebDriver() {
-        return getWebriver;
-    }
 
     public void clickBtnCountry_menuitem() {
         ldriver.findElement(btnCountry_menu).click();

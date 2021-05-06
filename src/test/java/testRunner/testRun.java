@@ -10,13 +10,12 @@ import org.junit.runner.RunWith;
         (
                 //features = ".//Features/Login.feature",
                 //glue = "stepDefinitions",
-                features = ".//Features//Working",
+                features = ".//Features",
                 glue = "StepDefinitions",
                 dryRun = false,
                 monochrome = true,
-                plugin = {"pretty","html:test-output"}
-
-
+                plugin = {"pretty","html:test-output.html"},
+                tags = "@test"
         )
 class TestRun {
 }
