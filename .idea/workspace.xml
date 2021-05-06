@@ -4,82 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a3973b-549d-40f6-800f-2811fc1b8904" name="Default Changelist" comment="Added a new test to work through">
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/Asifs_HudPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/Asifs_LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/Asifs_NewCandidatePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output.html" afterDir="false" />
+    <list default="true" id="f6a3973b-549d-40f6-800f-2811fc1b8904" name="Default Changelist" comment="Re enabled driver quit after test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Driver/Chromedriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid30640.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/replay_pid30640.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/Working/CandidatePersonalUpdateAddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/Working/CandidatePersonalUpdateAddressPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/Steps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testRunner/testRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testRunner/testRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire1129547159706627033tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire7344963500456636657tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire8442245781844780166tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire_01362938404269685442tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire_05655015482201733886tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire_06250335827499365481tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter1330867936376455912.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter6228577099601311665.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter8558884048674471979.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Blockers/OrganisationClientContactAddClientToOrganisationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Blockers/OrganisationRecordLocationEditLocationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Sprint29/FEAndBETransitionToCVSentStageSingleOrMultiPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Sprint29/FEImplementPaginationToTransitionToOfferStageSingleOrMultiPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateActivityAddNewActivityPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateActivityEditActivityPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateAddCandidateReviewPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateCareerAddNewRolePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateEditCandidateListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidatePersonalUpdateAddressPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidatePlusTopButtonAddToListNewListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidatePlusTopButtonAddToListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateRecordModalsMandatoryLocationFieldPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateRemoveLinkClientContactPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CandidateSummaryAddQualificationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientAddAlertPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientContactRecordJobsTabPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientContactRecordRemoveCandidatePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientInformationMiddleplusBtnAddNewPositionPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientLinkCandidatePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientPlusButtonTopAddClientToListNewList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/ClientPlusButtonTopAddClientToListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CreateCandidatesPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CreateNewCandidateListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CreateNewClientContactPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CreateNewJobPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/CreateNewOrganisationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEAddCandidateToJobTransitionToLonglistPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEChangeStageDropdownPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEClientContactCreateActivityActivityModalPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEDirectTransitionsToShortlistStagePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEGridViewOfferPlacedPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEJobCreateActivityActivityModalPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/FEOrganisationCreateActivityActivityModalPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/JobsAddAlertPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/JobsEditActivityPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/LoginNewPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationAddListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationAddToListNewListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationAddToListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationEditActivityPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationEditListPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationLinkedJobsSubsidiaryOrganisationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationLocationPlusBtnMiddleAddLocationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/OrganisationPlusTopButtonAddAlertToRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/Working/PipelineManagementEmptyStatesforGridPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObjects/newFeatures/Blockers/FECandidateViewActivityActivityFilterPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StepDefinitions/Steps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testRunner/TestRun.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620209474940</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Re enabled driver quit after test">
+      <created>1620292471030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620292471030</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +245,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -321,6 +267,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added a new test to work through" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a new test to work through" />
+    <MESSAGE value="Re enabled driver quit after test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Re enabled driver quit after test" />
   </component>
 </project>
