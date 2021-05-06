@@ -3,7 +3,6 @@ package StepDefinitions;
 import PageObjects.Asifs_HudPage;
 import PageObjects.Asifs_LoginPage;
 import PageObjects.Asifs_NewCandidatePage;
-import PageObjects.BasePage;
 import PageObjects.Blockers.OrganisationClientContactAddClientToOrganisationPage;
 import PageObjects.Sprint29.FEAndBETransitionToCVSentStageSingleOrMultiPage;
 import PageObjects.Sprint29.FEImplementPaginationToTransitionToOfferStageSingleOrMultiPage;
@@ -49,7 +48,6 @@ import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.Assert.assertEquals;
 
 
 public class Steps {
@@ -126,7 +124,7 @@ public class Steps {
     @After
     public void doSomethingAfter(Scenario scenario) {
         if (driver != null) {
-            //driver.quit();
+            driver.quit();
         }
 
     }
